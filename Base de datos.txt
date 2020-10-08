@@ -1,0 +1,65 @@
+
+/* CREAR NUEVA CONEXION A LA BASE DE DATOS */
+create user Proyecto identified by 12345;
+
+/* CREAR LAS TABLAS */
+
+create table articulos (
+ id_articulo number,
+ nombre varchar(30),
+ descripcion varchar(300),
+ fecha_publicacion varchar(15),
+ URL varchar(300),
+ constraint pk_id_articulo primary key (id_articulo)
+);
+
+create table usuarios (
+ id_usuario number,
+ cedula_user varchar2(12),
+ nombres varchar2(50),
+ apellidos varchar2(50),
+ edad number,
+ telefono varchar2(10),
+ email varchar2(50),
+ sexo varchar2(12),
+ contraseña varchar2(20),
+ acepta_condiciones varchar2(5),
+ CONSTRAINT PK_USUARIO primary key (id_usuario)
+);
+
+create table administradores (
+ id_admin number,
+ cedula_admin varchar2(12),
+ nombres varchar2(50),
+ apellidos varchar2(50),
+ edad number,
+ telefono varchar2(10),
+ email varchar2(50),
+ sexo varchar2(12),
+ contraseña varchar2(20),
+ acepta_condiciones varchar2(5),
+ CONSTRAINT PK_ADMIN primary key (id_admin)
+);
+
+create table comentarios (
+ id_comentario number,
+ nombre_user varchar2(50),
+ apellido user varchar2(50),
+ fecha_comentario varchar2(25),
+ nombre_articulo varchar2(300),
+ comentario varchar2(300),
+ CONSTRAINT PK_COMENTARIO primary key (id_comentario)
+);
+ 
+
+
+
+
+
+
+
+
+
+
+
+
